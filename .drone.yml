@@ -5,4 +5,4 @@ steps:
   slack:
     image: plugins/slack
     channel: imaginato-sys
-    webhook: https://hooks.slack.com/services/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
+    webhook: 
