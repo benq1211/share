@@ -2,7 +2,11 @@ kind: pipeline
 name: default
 
 steps:
-  slack:
-    image: plugins/slack
-    channel: imaginato-sys
-    webhook: 1
+- name: ping
+  image: redis
+  commands:
+  - redis-cli -h cache ping
+
+services:
+- name: cache
+  image: redis
