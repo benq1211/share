@@ -1,0 +1,12 @@
+kind: pipeline
+name: default
+
+steps:
+- name: redis
+  image: redis
+  detach: true
+
+- name: ping
+  image: redis
+  commands:
+  - redis-cli -h cache ping
