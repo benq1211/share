@@ -2,11 +2,7 @@ kind: pipeline
 name: default
 
 steps:
-- name: redis
-  image: redis
-  detach: true
-
-- name: ping
-  image: redis
-  commands:
-  - redis-cli -h cache ping
+  slack:
+    image: plugins/slack
+    channel: imaginato-sys
+    webhook: https://hooks.slack.com/services/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
